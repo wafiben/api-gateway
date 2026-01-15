@@ -1,4 +1,4 @@
-name: Java CI - Unit Tests
+name: Java CI - Unit Tests - End To End Test
 
 on:
   push:
@@ -35,6 +35,6 @@ jobs:
       - name: Run unit tests
         run: ./gradlew test --info
 
-          # Run E2E tests (gateway with mocked Auth)
+      # Run E2E tests (gateway with mocked Auth)
       - name: Run E2E tests
         run: ./gradlew test --tests 'e2e.*' --info

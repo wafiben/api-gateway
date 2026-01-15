@@ -34,6 +34,7 @@ public class AuthGatewayE2ETest {
 
     @Test
     void shouldRegisterUser() {
+
         // Arrange
         CreateUserRequest request = new CreateUserRequest("alice@test.com", "1234", "alice");
 
@@ -48,6 +49,7 @@ public class AuthGatewayE2ETest {
         assertEquals("fake-register-token", response.getToken());
 
         mockServer.verify();
+
     }
 
     @Test
