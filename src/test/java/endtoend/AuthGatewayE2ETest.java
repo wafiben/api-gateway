@@ -68,6 +68,7 @@ public class AuthGatewayE2ETest {
         // Assert
         assertNotNull(response);
         assertEquals("fake-login-token", response.getToken());
+        assertEquals(false,true);
 
         // Verify
         mockServer.verify();

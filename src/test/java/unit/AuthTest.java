@@ -67,6 +67,7 @@ public class AuthTest {
         );
 
         assertEquals("User already exists", ex.getMessage());
+        assertEquals(false,true);
     }
 
     @Test
