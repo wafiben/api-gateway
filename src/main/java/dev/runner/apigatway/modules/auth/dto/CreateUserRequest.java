@@ -38,12 +38,4 @@ public class CreateUserRequest {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "CreateUserRequest{" +
-                "username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 }
