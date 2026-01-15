@@ -22,7 +22,6 @@ public class AuthGatewayController {
 
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody CreateUserRequest request) {
-        System.out.println();
         return ResponseEntity.ok(authService.register(request));
     }
 
