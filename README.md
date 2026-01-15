@@ -35,3 +35,5 @@ docker run -p 9000:9000 api-gateway
 ```
 
 ---
+
+SPRING_APPLICATION_NAME
