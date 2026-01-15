@@ -1,9 +1,9 @@
-package DTO;
+package dev.runner.apigatway.modules.auth.dto;
 
 public class AuthResponse {
     private String token;
 
-    public AuthResponse() {
+    AuthResponse() {
     }
 
     public AuthResponse(String token) {
