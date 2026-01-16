@@ -19,8 +19,6 @@ WORKDIR /app
 # Copy built jar from build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# Expose port 9000 (matches your Render setting)
 EXPOSE 9000
 
-# Use PORT from environment variable (falls back to 9000)
-ENTRYPOINT ["sh", "-c", "java -Dserver.port=${PORT:-9000} -jar app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
