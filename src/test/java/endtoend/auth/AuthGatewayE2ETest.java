@@ -1,13 +1,12 @@
-package endtoend;
+package endtoend.auth;
 
-import dev.runner.apigatway.ApiGatewayApplication;
 import dev.runner.apigatway.modules.auth.dto.AuthResponse;
 import dev.runner.apigatway.modules.auth.dto.CreateUserRequest;
 import dev.runner.apigatway.modules.auth.dto.LoginRequest;
 import dev.runner.apigatway.modules.auth.service.auth.AuthServiceGatewayImpl;
+import endtoend.AbstractTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
@@ -16,11 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
-@SpringBootTest(
-        classes = ApiGatewayApplication.class,
-        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
-)
-public class AuthGatewayE2ETest {
+
+public class AuthGatewayE2ETest extends AbstractTest {
 
     private AuthServiceGatewayImpl gateway;
     private MockRestServiceServer mockServer;
