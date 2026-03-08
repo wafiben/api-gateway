@@ -13,8 +13,6 @@ public class CategoryServiceInMemory implements CategoryServiceGateway {
 
     public List<CategoryDto> categoryList(GetCategoryRequest requestDto) {
         return categories.stream().filter((elt) -> {
-            System.out.println("ss " + elt.getName());
-            System.out.println("ss " + requestDto.getName());
             return elt.getName().equals(requestDto.getName());
         }).toList();
     }
