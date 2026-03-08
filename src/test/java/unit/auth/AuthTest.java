@@ -1,4 +1,4 @@
-package unit;
+package unit.auth;
 
 import dev.runner.apigatway.modules.auth.builders.UserBuilder;
 import dev.runner.apigatway.modules.auth.dto.AuthResponse;
