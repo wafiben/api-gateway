@@ -17,8 +17,8 @@ import java.util.Optional;
 
 @Service
 public class CategoryServiceImp implements CategoryServiceGateway {
-
     private final RestTemplate restTemplate;
+
     private final String categoryServiceUrl;
 
     public CategoryServiceImp(@Qualifier("plainRestTemplate") RestTemplate restTemplate,

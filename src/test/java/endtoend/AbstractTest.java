@@ -1,6 +1,5 @@
 package endtoend;
 
-
 import dev.runner.apigatway.ApiGatewayApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 
