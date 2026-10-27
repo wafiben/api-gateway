@@ -19,18 +19,20 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 public class AuthGatewayE2ETest extends AbstractTest {
 
     private AuthServiceGatewayImpl gateway;
+
     private MockRestServiceServer mockServer;
+
+    private RestTemplate restTemplate;
 
     @BeforeEach
     void setup() {
-        RestTemplate restTemplate = new RestTemplate();
+        restTemplate = new RestTemplate();
         gateway = new AuthServiceGatewayImpl(restTemplate, "http://localhost:8081");
         mockServer = MockRestServiceServer.createServer(restTemplate);
     }
 
     @Test
     void shouldRegisterUser() {
-
         // Arrange
         CreateUserRequest request = new CreateUserRequest("alice@test.com", "1234", "alice");
 
@@ -45,7 +47,6 @@ public class AuthGatewayE2ETest extends AbstractTest {
         assertEquals("fake-register-token", response.getToken());
 
         mockServer.verify();
-
     }
 
     @Test
@@ -64,7 +65,6 @@ public class AuthGatewayE2ETest extends AbstractTest {
         // Assert
         assertNotNull(response);
         assertEquals("fake-login-token", response.getToken());
-
         // Verify
         mockServer.verify();
     }

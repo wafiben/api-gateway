@@ -1,5 +1,6 @@
 package dev.runner.apigatway.modules.category;
 
+import dev.runner.apigatway.config.Endpoints;
 import dev.runner.apigatway.modules.category.dto.CategoryDto;
 import dev.runner.apigatway.modules.category.dto.GetCategoryRequest;
 import dev.runner.apigatway.modules.category.interfaces.CategoryServiceGateway;
@@ -10,7 +11,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/categories")
+@RequestMapping(Endpoints.CATEGORY)
 public class CategoryGatewayController {
 
     private final CategoryServiceGateway categoryService;

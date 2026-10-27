@@ -52,7 +52,7 @@ public class CategoryGatewayE2ETest extends AbstractTest {
         mockServer.expect(requestTo("http://localhost:8083/categories?name=Sport"))
                 .andRespond(withSuccess(mockResponseJson, MediaType.APPLICATION_JSON));
 
-        List<CategoryDto> response = gateway.categoryList(new GetCategoryRequest("Sport", null)); // ← name en premier
+        List<CategoryDto> response = gateway.categoryList(new GetCategoryRequest("Sport", null));
 
         assertNotNull(response);
         assertEquals(1, response.size());
